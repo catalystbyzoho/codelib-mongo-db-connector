@@ -12,7 +12,7 @@ The MongoDB Connector for Catalyst is a code library (codelib) designed to conne
 
 **AdvancedIO Function:**
 
-- `mongodb_connection_handler`: A function responsible for handling connections to MongoDB. It facilitates the creation, reading, updating, and deletion of documents within specified collections.
+- `mongodb_service`: A function responsible for handling connections to MongoDB. It facilitates the creation, reading, updating, and deletion of documents within specified collections.
 
 ## How to use
 
@@ -48,7 +48,7 @@ Upon installation, the pre-configured Catalyst resources of the CodeLib solution
 ## Step 3: Configure Functions Component
 
 1. Open the `functions` directory of your Catalyst project in your local system.
-2. In the `catalyst-config.json` file of the `mongodb_connection_handler` function, configure the values given below for the key `env_variables`:
+2. In the `catalyst-config.json` file of the `mongodb_service` function, configure the values given below for the key `env_variables`:
     - `MONGODB_CONNECTION_URL`
     - `DATABASE_NAME`
     - `COLLECTION_NAME`
@@ -62,28 +62,28 @@ Upon installation, the pre-configured Catalyst resources of the CodeLib solution
 
 1. **Get Paged Documents**
 
-   - **Endpoint:** `/server/mongodb_connection_handler/documents?perPage=200&page=1`
+   - **Endpoint:** `/server/mongodb_service/documents?perPage=200&page=1`
    - **Method:** GET
    - **Params:**
        - `perPage`: Number of documents per page (e.g., 200)
        - `page`: Page number (e.g., 1)
    - **Example:**
      ```bash
-     curl -X GET "https://your-catalyst-url/server/mongodb_connection_handler/documents?perPage=200&page=1" -H "CODELIB_SECRET_KEY: your-secret-key"
+     curl -X GET "https://your-catalyst-url/server/mongodb_service/documents?perPage=200&page=1" -H "CODELIB_SECRET_KEY: your-secret-key"
      ```
 
 2. **Get Document**
 
-   - **Endpoint:** `/server/mongodb_connection_handler/document/DOCUMENT_ID`
+   - **Endpoint:** `/server/mongodb_service/document/DOCUMENT_ID`
    - **Method:** GET
    - **Example:**
      ```bash
-     curl -X GET "https://your-catalyst-url/server/mongodb_connection_handler/document/your-document-id" -H "CODELIB_SECRET_KEY: your-secret-key"
+     curl -X GET "https://your-catalyst-url/server/mongodb_service/document/your-document-id" -H "CODELIB_SECRET_KEY: your-secret-key"
      ```
 
 3. **Create Documents**
 
-   - **Endpoint:** `/server/mongodb_connection_handler/documents`
+   - **Endpoint:** `/server/mongodb_service/documents`
    - **Method:** POST
    - **Request Body:**
      ```json
@@ -94,12 +94,12 @@ Upon installation, the pre-configured Catalyst resources of the CodeLib solution
      ```
    - **Example:**
      ```bash
-     curl -X POST "https://your-catalyst-url/server/mongodb_connection_handler/documents" -H "CODELIB_SECRET_KEY: your-secret-key" -H "Content-Type: application/json" -d '[{"name": "Data 1"}, {"name": "Data 2"}]'
+     curl -X POST "https://your-catalyst-url/server/mongodb_service/documents" -H "CODELIB_SECRET_KEY: your-secret-key" -H "Content-Type: application/json" -d '[{"name": "Data 1"}, {"name": "Data 2"}]'
      ```
 
 4. **Update Document**
 
-   - **Endpoint:** `/server/mongodb_connection_handler/documents`
+   - **Endpoint:** `/server/mongodb_service/documents`
    - **Method:** PUT
    - **Request Body:**
      ```json
@@ -109,25 +109,25 @@ Upon installation, the pre-configured Catalyst resources of the CodeLib solution
      ```
    - **Example:**
      ```bash
-     curl -X PUT "https://your-catalyst-url/server/mongodb_connection_handler/documents" -H "CODELIB_SECRET_KEY: your-secret-key" -H "Content-Type: application/json" -d '[{"name": "Data 1", "id": "2fe300f5-fc47-4564-a2d6-7e9efd7289e5"}]'
+     curl -X PUT "https://your-catalyst-url/server/mongodb_service/documents" -H "CODELIB_SECRET_KEY: your-secret-key" -H "Content-Type: application/json" -d '[{"name": "Data 1", "id": "2fe300f5-fc47-4564-a2d6-7e9efd7289e5"}]'
      ```
 
 5. **Delete Document**
 
-   - **Endpoint:** `/server/mongodb_connection_handler/documents?ids=DOCUMENT_ID`
+   - **Endpoint:** `/server/mongodb_service/documents?ids=DOCUMENT_ID`
    - **Method:** DELETE
    - **Example:**
      ```bash
-     curl -X DELETE "https://your-catalyst-url/server/mongodb_connection_handler/documents?ids=your-document-id" -H "CODELIB_SECRET_KEY: your-secret-key"
+     curl -X DELETE "https://your-catalyst-url/server/mongodb_service/documents?ids=your-document-id" -H "CODELIB_SECRET_KEY: your-secret-key"
      ```
 
 6. **Delete Multiple Documents**
 
-   - **Endpoint:** `/server/mongodb_connection_handler/documents?ids=DOCUMENT_ID1,DOCUMENT_ID2,DOCUMENT_ID3,DOCUMENT_ID4`
+   - **Endpoint:** `/server/mongodb_service/documents?ids=DOCUMENT_ID1,DOCUMENT_ID2,DOCUMENT_ID3,DOCUMENT_ID4`
    - **Method:** DELETE
    - **Example:**
      ```bash
-     curl -X DELETE "https://your-catalyst-url/server/mongodb_connection_handler/documents?ids=your-document-id1,your-document-id2,your-document-id3,your-document-id4" -H "CODELIB_SECRET_KEY: your-secret-key"
+     curl -X DELETE "https://your-catalyst-url/server/mongodb_service/documents?ids=your-document-id1,your-document-id2,your-document-id3,your-document-id4" -H "CODELIB_SECRET_KEY: your-secret-key"
      ```
 
 Ensure that you replace placeholders such as `your-catalyst-url`, `your-secret-key`, and `your-document-id` with your specific values. Additionally, make sure to set the correct `Content-Type` header when sending a request with a request body. Adjust the payload data based on your specific use case. By following these steps and utilizing the defined endpoints, developers can seamlessly integrate MongoDB with Catalyst functions, enabling efficient data operations within the serverless environment.
