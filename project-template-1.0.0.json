@@ -1,0 +1,33 @@
+{
+	"name": "project-template",
+	"version": "1.0.0",
+	"parameters": {},
+	"components": {
+		"Functions": [
+			{
+				"type": "function",
+				"name": "mongodb_service",
+				"properties": {
+					"stack": "node18",
+					"code": {
+						"path": "functions/mongodb_service.zip"
+					},
+					"configuration": {
+						"environment": {
+							"variables": { 
+                                "MONGODB_CONNECTION_URL": "Your MongoDB Connection URL",
+                                "DATABASE_NAME": "Your Database Name",
+                                "COLLECTION_NAME": "Your Collection Name",
+                                "CODELIB_SECRET_KEY": "CODELIB_FAKE_KEY"
+                            }
+						},
+						"memory": 256
+					},
+					"type": "applogic",
+					"name": "mongodb_service"
+				},
+				"dependsOn": []
+			}
+		]
+	}
+}
