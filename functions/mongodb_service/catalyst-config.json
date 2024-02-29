@@ -1,0 +1,16 @@
+{
+  "deployment": {
+    "name": "mongodb_service",
+    "stack": "node18",
+    "type": "advancedio",
+    "env_variables": {
+      "MONGODB_CONNECTION_URL": "Your MongoDB Connection URL",
+      "DATABASE_NAME": "Your Database Name",
+      "COLLECTION_NAME": "Your Collection Name",
+      "CODELIB_SECRET_KEY": "CODELIB_FAKE_KEY"
+    }
+  },
+  "execution": {
+    "main": "index.js"
+  }
+}

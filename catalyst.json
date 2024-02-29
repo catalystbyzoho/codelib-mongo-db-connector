@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "targets": [
+        "mongodb_service"
+      ],
+      "source": "functions"
+    }
+  }
