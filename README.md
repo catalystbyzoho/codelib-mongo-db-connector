@@ -31,11 +31,6 @@ Execute the command below in the Catalyst CLI to install the Zoho CRM Bulk Data 
 ```bash
 $ catalyst codelib:install https://github.com/arun-gokul/mongodb-connector
 ```
-
-# MongoDB Connector- CodeLib Documentation
-
-## Installation
-
 Upon installation, the pre-configured Catalyst resources of the CodeLib solution will be automatically deployed to the Catalyst console.
 
 ## Step 2: Create MongoDB Connection URL, Cluster, and Collection
