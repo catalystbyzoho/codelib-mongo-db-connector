@@ -16,7 +16,7 @@ The MongoDB Connector for Catalyst is a code library (codelib) designed to conne
 
 ## How to use
 
-Before installing any Catalyst CodeLib solution, please make sure to login to the Catalyst CLI using your Catalyst account by following the steps mentioned [here](#).
+Before installing any Catalyst CodeLib solution, please make sure to login to the Catalyst CLI using your Catalyst account by following the steps mentioned [here](https://docs.catalyst.zoho.com/en/cli/v1/cli-command-reference/).
 
 Follow all the steps mentioned below to install, configure and execute the MongoDB Connector CodeLib solution.
 
@@ -24,7 +24,7 @@ Follow all the steps mentioned below to install, configure and execute the Mongo
 
 If you are installing the CodeLib solution for an already existing Catalyst project, navigate to its root directory from your terminal and directly proceed with installing the CodeLib.
 
-You can also initialize a new project following the steps mentioned in [this page](#). After you initialize the project, proceed to navigate to its root directory and continue with the installation.
+You can also initialize a new project following the steps mentioned in [this page](https://docs.catalyst.zoho.com/en/cli/v1/initialize-resources/initialize-new-project/). After you initialize the project, proceed to navigate to its root directory and continue with the installation.
 
 Execute the command below in the Catalyst CLI to install the Zoho CRM Bulk Data Processing CodeLib solution:
 
