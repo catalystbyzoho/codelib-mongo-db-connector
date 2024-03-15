@@ -35,10 +35,10 @@ Upon installation, the pre-configured Catalyst resources of the CodeLib solution
 
 ## Step 2: Create MongoDB Connection URL, Cluster, and Collection
 
-1. **MongoDB account:** Follow [this documentation](#) to create a MongoDB account.
-2. **MongoDB cluster:** Follow [this documentation](#) to create a MongoDB cluster.
-3. **MongoDB collection:** Follow [this documentation](#) to create a MongoDB collection.
-4. **MongoDB connection URL:** Follow [this documentation](#) to get the connection URL for your MongoDB cluster.
+1. **MongoDB account:** Follow [this documentation](https://www.mongodb.com/cloud/atlas/register) to create a MongoDB account.
+2. **MongoDB cluster:** Follow [this documentation](https://www.mongodb.com/docs/guides/atlas/cluster/) to create a MongoDB cluster.
+3. **MongoDB collection:** Follow [this documentation](https://www.mongodb.com/docs/manual/reference/method/db.createCollection/) to create a MongoDB collection.
+4. **MongoDB connection URL:** Follow [this documentation](https://www.mongodb.com/docs/manual/reference/connection-string/) to get the connection URL for your MongoDB cluster.
 
 ## Step 3: Configure Functions Component
 
