@@ -109,11 +109,11 @@ Upon installation, the pre-configured Catalyst resources of the CodeLib solution
 
 5. **Delete Document**
 
-   - **Endpoint:** `/server/mongodb_service/documents?ids=DOCUMENT_ID`
+   - **Endpoint:** `/server/mongodb_service/document/DOCUMENT_ID`
    - **Method:** DELETE
    - **Example:**
      ```bash
-     curl -X DELETE "https://your-catalyst-url/server/mongodb_service/documents?ids=your-document-id" -H "CODELIB_SECRET_KEY: your-secret-key"
+     curl -X DELETE "https://your-catalyst-url/server/mongodb_service/document/your-document-id" -H "CODELIB_SECRET_KEY: your-secret-key"
      ```
 
 6. **Delete Multiple Documents**
